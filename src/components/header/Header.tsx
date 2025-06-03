@@ -11,20 +11,18 @@ const Header = ({ setSidebar }: Props) => {
   const [showSearch, setShowSearch] = useState(false);
 
   return (
-    <div className="bg-black text-white p-4 md:p-6 lg:p-8 flex flex-col items-center justify-between w-full relative">
-            <div className="absolute top-1/2 -translate-y-1/2  left-[5%] ">
-              <button className="cursor-pointer" onClick={() => setSidebar(true)}>
-                <img src={Hamburguesa} alt="Barras" className="h-[4vh] md:h-[6vh]" />
+    <div className="bg-black text-white  w-full relative">
 
-              </button>
-            </div>
-      <div className="flex items-center justify-between">
+      <div className="p-4 md:p-6 lg:p-8 flex flex-wrap items-center justify-between">
+        <button className="cursor-pointer" onClick={() => setSidebar(true)}>
+          <img src={Hamburguesa} alt="Barras" className="h-[4vh] md:h-[6vh]" />
+        </button>
+      
         
-        <div className="flex items-center space-x-4 bg-red-200">
-          <div className="flex items-center space-x-2">
-            <img src={Imagen} alt="Logo" className="h-20" />
-          </div>
+        <div className="flex w-[70vw] sm:h-20 sm:w-auto">
+            <img src={Imagen} alt="Logo" className="w-full h-full" />
         </div>
+
         <button onClick={() => setShowSearch(!showSearch)}>
           <svg
             className="w-6 h-6 text-white"
@@ -35,8 +33,7 @@ const Header = ({ setSidebar }: Props) => {
             <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-4.35-4.35M17 11a6 6 0 11-12 0 6 6 0 0112 0z" />
           </svg>
         </button>
-      </div>
-
+        </div>
       {showSearch && <SearchBar />}
     </div>
   );
