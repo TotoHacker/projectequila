@@ -4,9 +4,9 @@ const SearchBar = () => {
   const [query, setQuery] = useState("");
 
   return (
-    <div className="w-full flex justify-center mt-4">
+    <div className="w-full flex justify-center absolute top-[100%] z-[100] bg-black/60 p-[4vh]">
         
-      <div className="flex items-center bg-black bg-white text-black px-4 py-2 rounded-full w-[80%] md:w-2/3 shadow-lg">
+      <div className="flex items-center bg-white text-black px-4 py-2 rounded-full w-[80%] md:w-2/3 shadow-lg">
         <input
           type="text"
           placeholder="Busca un pueblo o estado..."
