@@ -1,9 +1,8 @@
 import Info from './Sections/Informacion/Informacion'
 import Carousel from './components/Carrusel/Carrusel'
 import Home from './components/Home/Home'
-import Sidebar from './components/Sidebar/Sidebar'
-import Header from './components/header/Header'
-import { useState } from 'react'
+
+import Footer from './components/footer/FooterComponent'
 
 
 function App() {
@@ -17,7 +16,9 @@ function App() {
         <Header setSidebar={setSidebar}/>
         <Home />
         <Info />
-      <Carousel />
+        <Carousel />
+        <Footer />
+      
       </div>
     </>
   )
