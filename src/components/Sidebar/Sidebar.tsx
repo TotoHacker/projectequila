@@ -44,4 +44,5 @@ function Sidebar({ sidebar, setSidebar }: Props) {
   );
 }
 
+
 export default Sidebar;
