@@ -1,16 +1,26 @@
 import { useState } from "react";
 import SearchBar from "./SearchBar";
 import Imagen from "../../assets/images/Logo.png"
+import Hamburguesa from "../../assets/hamburgesaIcono.svg"
 
-const Header = () => {
+  type Props = {
+    setSidebar: (value: boolean) => void;
+  };
+
+const Header = ({ setSidebar }: Props) => {
   const [showSearch, setShowSearch] = useState(false);
 
   return (
-    <div className="bg-black text-white p-4 md:p-6 lg:p-8 flex flex-col items-center justify-between w-full">
+    <div className="bg-black text-white p-4 md:p-6 lg:p-8 flex flex-col items-center justify-between w-full relative">
+            <div className="absolute top-1/2 -translate-y-1/2  left-[5%] ">
+              <button className="cursor-pointer" onClick={() => setSidebar(true)}>
+                <img src={Hamburguesa} alt="Barras" className="h-[4vh] md:h-[6vh]" />
+
+              </button>
+            </div>
       <div className="flex items-center justify-between">
-        <div className="flex items-center space-x-4">
-          <button>
-          </button>
+        
+        <div className="flex items-center space-x-4 bg-red-200">
           <div className="flex items-center space-x-2">
             <img src={Imagen} alt="Logo" className="h-20" />
           </div>
