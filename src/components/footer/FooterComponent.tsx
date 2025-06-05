@@ -55,8 +55,8 @@ const Footer: React.FC = () => {
 
 
       {/* Sección de contacto e información - SIEMPRE en dos columnas */}
-      <div className="bg-[#eeeeee] py-6 px-4">
-        <div className="grid grid-cols-2 gap-8 max-w-4xl mx-auto text-sm text-start px-12">
+      <div className="bg-[#eeeeee] py-6 px-12">
+        <div className="grid grid-cols-2 gap-8 max-w-4xl mx-auto text-sm text-start px-12 font-semibold">
           {/* Columna 1: Contáctanos */}
           <div className="">
             <h3 className="text-fuchsia-800 font-bold mb-2">Contáctanos</h3>
@@ -78,7 +78,7 @@ const Footer: React.FC = () => {
       </div>
 
       {/* Pie de página final */}
-      <div className="bg-[#be2875] text-white text-sm py-4">
+      <div className="bg-[#b00367] font-semibold text-white text-sm py-4">
         <p>&copy; 2024 Pueblos Mágicos | México Desconocido</p>
         <p>Avisos de privacidad</p>
       </div>

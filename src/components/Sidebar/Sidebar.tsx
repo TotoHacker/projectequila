@@ -9,7 +9,7 @@ function Sidebar({ sidebar, setSidebar }: Props) {
   return (
     <div
       className={`
-        fixed top-0 left-0 h-full w-[60vw]  md:w-[20vw] z-50
+        fixed top-0 left-0 h-full w-[60vw]  md:w-[40%] z-150
         bg-black text-white p-[2vw] rounded-r-2xl  shadow-[0_0_40px_rgba(0,0,0,0.9)] 
         transform transition-transform duration-300 ease-in-out
         ${sidebar ? "translate-x-0" : "-translate-x-full"}
@@ -17,7 +17,7 @@ function Sidebar({ sidebar, setSidebar }: Props) {
     >
 
       <div className="flex mt-[2.5vh] md:mt-[1vh] items-center justify-center ">
-        <img src={Imagen} alt="Logo" className="h-[3.2vh] md:h-[5vh]" />
+        <img src={Imagen} alt="Logo" className="h-[4] md:h-[4]" />
       </div>
 
       {/* Botón para cerrar */}
