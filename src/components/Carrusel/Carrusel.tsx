@@ -12,7 +12,6 @@ export default function Carousel() {
   const startX = useRef<number | null>(null);
   const isDragging = useRef(false);
 
-  const imageWidthPercent = 90; // cada imagen ocupa 90% del contenedor visible
 
   const updateIndex = (newIndex: number) => {
     if (newIndex < 0) return;
@@ -96,8 +95,7 @@ export default function Carousel() {
       <div
         className="flex transition-transform duration-700 ease-in-out"
         style={{
-          width: `${images.length * imageWidthPercent}%`,
-          transform: `translateX(-${currentIndex * imageWidthPercent}%)`,
+          transform: `translateX(-${currentIndex * 90}%)`,
         }}
       >
         {images.map((img, idx) => (
@@ -106,10 +104,8 @@ export default function Carousel() {
             src={img}
             alt={`img-${idx}`}
             draggable={false}
-            className="h-130 object-cover flex-shrink-0"
-            style={{
-              width: `${imageWidthPercent}%`,
-            }}
+            className="h-130 object-cover flex-shrink-0 "
+
           />
         ))}
       </div>
